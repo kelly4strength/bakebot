@@ -2,7 +2,7 @@
 
 // */ 
 
-'use strict'
+// 'use strict'
 // add all of our code
 
 // npm packages
