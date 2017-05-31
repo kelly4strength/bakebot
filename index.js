@@ -1,6 +1,6 @@
 // index.js
 
-// */ 
+*/ 
 
 // 'use strict'
 // add all of our code
