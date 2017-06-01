@@ -31,7 +31,7 @@ app.get('/webhook/', function (req, res){
 	if(req.query['hub.verify_token'] === fb_token){
 			res.send(req.query['hub.challenge'])
 		}
-	res.send('No entry')
+	res.send('1486103994')
 })
 
 // adding the server
