@@ -1,7 +1,3 @@
-// index.js
-
-
-// 'use strict'
 // add all of our code
 
 // npm packages that we need
@@ -26,8 +22,7 @@ app.get('/', function (req, res) {
 
 // fb is looking for a webhook
 app.get('/webhook/', function (req, res){
-	if req.query['hub.verify_token'] === 
-		// PUT TOKEN IN
+	if req.query['hub.verify_token'] ===
 		'my_voice_is_my_password_verify_me') {
 			res.send(req.query['hub.challenge'])
 		}
