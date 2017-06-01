@@ -1,6 +1,11 @@
 // add all of our code
 'use strict'
 
+// import os
+
+const fb_token = process.env.FB_TOKEN
+
+
 // npm packages that we need
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -23,8 +28,7 @@ app.get('/', function (req, res) {
 
 // fb is looking for a webhook
 app.get('/webhook/', function (req, res){
-	if(req.query['hub.verify_token'] ===
-		'my_voice_is_my_password_verify_me') {
+	if(req.query['hub.verify_token'] === fb_token){
 			res.send(req.query['hub.challenge'])
 		}
 	res.send('No entry')
