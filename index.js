@@ -3,7 +3,7 @@
 
 // import os
 
-const fb_token = process.env.FB_TOKEN
+const fb_token = process.secrets.FB_TOKEN
 
 
 // npm packages that we need
