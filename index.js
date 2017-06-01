@@ -1,10 +1,8 @@
 // add all of our code
 'use strict'
 
-// import os
-
-// const fb_token = process.secrets.FB_TOKEN
-
+const token = process.env.FB_PAGE_ACCESS_TOKEN
+const vtoken = process.env.FB_VERIFY_ACCESS_TOKEN
 
 // npm packages that we need
 const express = require('express')
@@ -28,9 +26,9 @@ app.get('/', function (req, res) {
 
 // fb is looking for a webhook
 app.get('/webhook/', function (req, res){
-	if(req.query['hub.verify_token'] === 'EAAaZBKZBRTq5cBAHafHLQXBKaSAjXZAVRzJOZCZCOZAnv53aqre2sBdChq6aQkhBDROZAZCCervhUAPoZBiwZBSqn1ZBDX7eI8xOcOIq6zH7okHwWEBkQX9ZCMPMuVY1vUEZBQh94YjLYcZCQukewBkdgpaVZCADPC9sQhwLDk1kAQ34KIGhwZDZD'){
-			res.send(req.query['hub.challenge'])
-		}
+	if(req.query['hub.verify_token'] === v_token) {
+		res.send(req.query['hub.challenge'])
+	}
 	res.send('no entry')
 })
 
