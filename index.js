@@ -28,12 +28,9 @@ app.get('/', function (req, res) {
 app.get('/webhook/', function (req, res) {
 	if (req.query['hub.verify_token'] === vtoken) {
 		res.send(req.query['hub.challenge'])
+		return
 	} 
-	else {
-		// res.send('no entry')
-	()=> res.send('nope"')
-	}
-	
+	res.send('nope"')
 })
 
 // adding the server
