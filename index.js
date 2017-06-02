@@ -24,12 +24,12 @@ app.get('/', function (req, res) {
 	res.send('Jello World!')
 })
 
-// fb is looking for a webhook
+// fb is looking for a webhook verification
 app.get('/webhook/', function (req, res) {
-	if(req.query['hub.verify_token'] === vtoken) {
+	if (req.query['hub.verify_token'] === vtoken) {
 		res.send(req.query['hub.challenge'])
 	}
-		res.send('no entry')
+	// res.send('no entry')
 })
 
 // adding the server
