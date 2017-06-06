@@ -73,6 +73,8 @@ function receivedMessage(event) {
   console.log("Message data: ", event.message);
 }
 
+
+
 // adding the server
 // go and get port, and the function will print running on port
 app.listen(app.get('port'), function(){
